@@ -1,22 +1,18 @@
-# Масив варіантів для вибору гравця та комп'ютера
 OPTIONS = ['rock', 'scissors', 'paper']
 
-# Основний ігровий цикл, що продовжується, поки гравець не введе 'exit'
 loop do
 
   puts "Ваш вибір (rock, scissors, paper)? або 'exit' для завершення:"
-  player_choice = gets.chomp.downcase # Зчитування вводу користувача, приведення до нижнього регістру
+  player_choice = gets.chomp.downcase 
 
 
   exit if player_choice == 'exit'
 
-  # Перевірка правильності вибору гравця
   if OPTIONS.include?(player_choice)
 
-    computer_choice = OPTIONS.sample     # Комп'ютер робить випадковий вибір із масиву варіантів
+    computer_choice = OPTIONS.sample    
     puts "Ваш вибір: #{player_choice}, Комп'ютер вибрав: #{computer_choice}"
 
-    # Логіка визначення результату гри
     case [player_choice, computer_choice]
     when ['rock', 'scissors'], ['scissors', 'paper'], ['paper', 'rock']
       puts 'Ви виграли!' 
