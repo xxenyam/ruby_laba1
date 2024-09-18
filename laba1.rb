@@ -9,7 +9,7 @@ loop do
 
   if OPTIONS.include?(player_choice)
 
-    computer_choice = OPTIONS.sample    
+   computer_choice = OPTIONS[rand(0..2)]   
     puts "Ваш вибір: #{player_choice}, Комп'ютер вибрав: #{computer_choice}"
 
     case [player_choice, computer_choice]
