@@ -5,7 +5,6 @@ loop do
   puts "Ваш вибір (rock, scissors, paper)? або 'exit' для завершення:"
   player_choice = gets.chomp.downcase 
 
-
   exit if player_choice == 'exit'
 
   if OPTIONS.include?(player_choice)
